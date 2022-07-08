@@ -81,7 +81,7 @@ def assoc_toy(request, cat_id, toy_id):
     return redirect('detail', cat_id=cat_id)
 
 @login_required
-def assoc_toy(request, cat_id, toy_id):
+def unassoc_toy(request, cat_id, toy_id):
     # Note that you can pass a toy's id instead of the whole object
     Cat.objects.get(id=cat_id).toys.remove(toy_id)
     return redirect('detail', cat_id=cat_id)
