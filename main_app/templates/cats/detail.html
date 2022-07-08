@@ -85,7 +85,7 @@
         </span>
       </div>
       <div class="card-action">
-        <form action="{% url 'assoc_toy_delete' cat.id toy.id %}" method="post">
+        <form action="{% url 'unassoc_toy' cat.id toy.id %}" method="post">
           {% csrf_token %}
           <button type="submit" class="btn">Delete</button>
         </form>
